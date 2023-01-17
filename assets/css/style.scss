@@ -1,0 +1,117 @@
+$font: Helvetica, san-serif;
+$white: white;
+$black: black;
+$opacpurple: rebeccapurple;
+$opacwhite: #ffffffb3;
+// reset css
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+
+
+body {
+    width: 100%;
+    background: url("C:/Users/Aydan/Desktop/frontendmentorChallaenge1/fmc2landingpage2/assets/img/bg-desktop.svg") no-repeat;
+    background-size: 100%;
+    background-color: $opacpurple;
+}
+
+// header
+
+header {
+    margin-top: 50px;
+    height: 150px;
+    .logo-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// main
+
+.mockup {
+    display: flex;
+    justify-content: space-between;
+    .moc-img {
+        img {
+            width: 100%;
+        }
+    }
+    .mockup-text {
+        width: 40%;
+        padding-top: 50px;
+        color: $white;
+        h1 {
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+        p {
+            color: $opacwhite;
+            line-height: 30px;
+        }
+        button {
+            border: none;
+            outline: none;
+            background-color: $white;
+            color: $opacpurple;
+            padding: 10px 70px;
+            border-radius: 12px;
+            box-shadow: 0 0 5px 1px;
+        }
+    }
+}
+
+// footer 
+footer {
+    margin-top: 20px;
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 25px;
+        a {
+            height: 60px;
+            color: $white;
+            font-size: 25px;
+            border: 1px solid $opacwhite;
+            border-radius: 60px;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+    }
+}
+
+
+// responsive design
+
+$tab: 1200px;
+
+main .container {
+    @media screen and (max-width: $tab) {
+        .mockup {
+            flex-direction: column;
+            .moc-img {
+                margin: auto;
+            }
+            .mockup-text {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        footer {
+            .container {
+                justify-content: center;
+                padding-top: 40px;
+            }
+        }
+    }
+}
+
